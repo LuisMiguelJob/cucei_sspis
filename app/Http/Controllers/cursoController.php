@@ -9,9 +9,9 @@ use Symfony\Contracts\Service\Attribute\Required;
 
 class cursoController extends Controller
 {
-    public function prueba(){
+    public function index(){
 
-        return view('livewire.prueba', compact('livewire'));
+        return view('Pruebas.index');
     }
 
    

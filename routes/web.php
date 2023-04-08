@@ -37,7 +37,7 @@ Route::get('/', function(){
 });
 
 Route::controller(cursoController::class)->group(function(){
-    Route::get('livewire', 'prueba')->name('livewire.prueba');
+    Route::get('Pruebas', 'index')->name('Pruebas.index');
 });
 
 Route::get('forgot-password', ForgotPassword::class)->middleware('guest')->name('password.forgot');
