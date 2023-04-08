@@ -2,7 +2,7 @@
 
 @section('title','Prueba')
 
-    <h1>Pagina de crear</h1>
+    <h1>Proyectos</h1>
     <a href="">Crear proyecto</a>
     <ul>
             <li>

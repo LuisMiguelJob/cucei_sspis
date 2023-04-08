@@ -37,7 +37,7 @@ Route::get('/', function(){
 });
 
 Route::controller(cursoController::class)->group(function(){
-    Route::get('Pruebas', 'index')->name('Pruebas.index');
+    Route::get('Make_proyects', 'index')->name('Make_proyects.index');
 });
 
 Route::get('forgot-password', ForgotPassword::class)->middleware('guest')->name('password.forgot');

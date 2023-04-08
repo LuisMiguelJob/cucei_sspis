@@ -11,7 +11,7 @@ class cursoController extends Controller
 {
     public function index(){
 
-        return view('Pruebas.index');
+        return view('Make_proyects.index');
     }
 
    
