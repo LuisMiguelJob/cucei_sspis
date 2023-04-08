@@ -18,6 +18,9 @@ use App\Http\Livewire\Tables;
 use App\Http\Livewire\VirtualReality;
 use GuzzleHttp\Middleware;
 
+use App\Http\Controllers\cursoController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,15 +36,18 @@ Route::get('/', function(){
     return redirect('sign-in');
 });
 
+Route::controller(cursoController::class)->group(function(){
+    Route::get('livewire', 'prueba')->name('livewire.prueba');
+});
+
 Route::get('forgot-password', ForgotPassword::class)->middleware('guest')->name('password.forgot');
 Route::get('reset-password/{id}', ResetPassword::class)->middleware('signed')->name('reset-password');
-
 
 
 Route::get('sign-up', Register::class)->middleware('guest')->name('register');
 Route::get('sign-in', Login::class)->middleware('guest')->name('login');
 
-Route::get('user-profile', UserProfile::class)->middleware('auth')->name('user-profile');
+Route::get('user-profile', UserProfile::class)->middleware('')->name('user-profile');
 Route::get('user-management', UserManagement::class)->middleware('auth')->name('user-management');
 
 Route::group(['middleware' => 'auth'], function () {
