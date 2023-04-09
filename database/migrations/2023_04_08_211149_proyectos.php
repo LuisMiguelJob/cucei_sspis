@@ -21,6 +21,7 @@ class proyectos extends Migration
             $table->double('Progreso');
             $table->date('Fecha_inicio');
             $table->date('Fecha_final');
+            $table->timestamps();
         });
     }
 

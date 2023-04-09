@@ -37,7 +37,10 @@ Route::get('/', function(){
 });
 
 Route::controller(cursoController::class)->group(function(){
-    Route::get('Make_proyects', 'index')->name('Make_proyects.index');
+    Route::get('Projects', 'index')->name('Projects.index');
+    Route::get('Projects/create_project', 'create_project')->name('Projects.create_project');
+    Route::get('Projects/{id}', 'show_project')->name('Projects.show_project');
+    Route::post('Projects', 'store')->name('Projects.store');
 });
 
 Route::get('forgot-password', ForgotPassword::class)->middleware('guest')->name('password.forgot');
