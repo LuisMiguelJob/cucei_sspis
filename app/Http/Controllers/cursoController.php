@@ -37,4 +37,9 @@ class cursoController extends Controller
 
         return redirect()->route('Projects.show_project', $project);
     }
+
+    public function show_phases($id){
+        $proyecto = proyectos::find($id);
+        return view('Projects.Phases.show_phases', ['proyecto'=>$proyecto]);
+    }
 }
